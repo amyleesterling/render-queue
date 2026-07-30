@@ -14,11 +14,11 @@
                                   "out=D:\\Meshes\\renders\\banc_shotB.mp4"
                               ],
                      "expect_minutes":  100,
-                     "status":  "queued",
+                     "status":  "running",
                      "note":  "one DN, six body parts. beats checked as stills 30 Jul",
                      "added_by":  "session 30 Jul",
                      "added":  "2026-07-30T13:10:00",
-                     "started":  null,
+                     "started":  "2026-07-30T18:36:36",
                      "finished":  null,
                      "output":  null
                  },

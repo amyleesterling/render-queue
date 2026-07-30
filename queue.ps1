@@ -222,7 +222,11 @@ switch ($Command) {
       if ($ok) {
         Say ("#{0}: DONE in {1} min, {2} MB" -f $j.id, $mins, [math]::Round((Get-Item $out).Length/1MB,1))
         if ($out -like '*.mp4') {
-          $web = [IO.Path]::ChangeExtension($out, $null) + 'web.mp4'
+          # <name>_web.mp4, matching every existing encode. ChangeExtension with a
+          # null extension leaves a trailing dot, which produced <name>.web.mp4 and
+          # broke the review shelf's lookup.
+          $web = [IO.Path]::Combine([IO.Path]::GetDirectoryName($out),
+                   [IO.Path]::GetFileNameWithoutExtension($out) + '_web.mp4')
           ffmpeg -y -v error -i $out -c:v libx264 -preset slow -crf 23 -pix_fmt yuv420p `
                  -movflags +faststart -an $web 2>$null
           if (Test-Path $web) { Say ("#{0}: web encode {1} MB" -f $j.id, [math]::Round((Get-Item $web).Length/1MB,1)) }
@@ -238,6 +242,15 @@ switch ($Command) {
                 } }
               Write-Queue $qq } finally { Unlock-Queue }
         Sync-Push ("queue: #{0} {1}" -f $j.id, $(if ($ok) { 'done' } else { 'failed' }))
+      }
+
+      # a finished render is not an approved render: put it on the review shelf
+      if ($ok) {
+        $rv = 'C:\Users\amyle\review\review.ps1'
+        if (Test-Path $rv) {
+          try { & $rv add -Job $j.id | ForEach-Object { Say ("#{0}: review  {1}" -f $j.id, $_) } }
+          catch { Say ("#{0}: could not add to review shelf: {1}" -f $j.id, $_.Exception.Message) }
+        }
       }
     }
     Say '=== queue run finished ==='

@@ -1,0 +1,47 @@
+﻿{
+    "version":  1,
+    "next_id":  4,
+    "jobs":  [
+                 {
+                     "id":  1,
+                     "project":  "banc",
+                     "name":  "shotB_descending",
+                     "script":  "D:\\Meshes\\banc_shotB_anim.py",
+                     "args":  [
+                                  "frames=576",
+                                  "res=1080x1920",
+                                  "samples=64",
+                                  "out=D:\\Meshes\\renders\\banc_shotB.mp4"
+                              ],
+                     "expect_minutes":  100,
+                     "status":  "queued",
+                     "note":  "one DN, six body parts. beats checked as stills 30 Jul",
+                     "added_by":  "session 30 Jul",
+                     "added":  "2026-07-30T13:10:00",
+                     "started":  null,
+                     "finished":  null,
+                     "output":  null
+                 },
+                 {
+                     "id":  3,
+                     "project":  "microns",
+                     "name":  "cortex_orbit",
+                     "script":  "D:\\Meshes\\microns_column.py",
+                     "args":  [
+                                  "src=D:/Meshes/microns_area",
+                                  "res=1920x1080",
+                                  "samples=64",
+                                  "frames=240",
+                                  "out=D:\\Meshes\\renders\\microns_orbit.mp4"
+                              ],
+                     "expect_minutes":  110,
+                     "status":  "queued",
+                     "note":  "orbit 72 deg + descend, per-area decimated 81M faces, framing probed at 3 frames 30 Jul",
+                     "added_by":  "unattributed",
+                     "added":  "2026-07-30T14:02:35",
+                     "started":  null,
+                     "finished":  null,
+                     "output":  null
+                 }
+             ]
+}

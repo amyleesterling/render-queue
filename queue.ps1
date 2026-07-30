@@ -83,9 +83,18 @@ function Unlock-Queue { try { Remove-Item $LockFile -Force -ErrorAction Stop } c
 
 function Read-Queue {
   if (-not (Test-Path $QueueFile)) { return [pscustomobject]@{ version = 1; next_id = 1; jobs = @() } }
-  Get-Content $QueueFile -Raw | ConvertFrom-Json
+  # strip a byte order mark if some other tool left one, so ConvertFrom-Json cannot choke
+  ((Get-Content $QueueFile -Raw) -replace "^﻿", '') | ConvertFrom-Json
 }
-function Write-Queue($q) { $q | ConvertTo-Json -Depth 8 | Out-File $QueueFile -Encoding utf8 }
+function Write-Queue($q) {
+  # UTF-8 WITHOUT a BOM. PowerShell 5.1's `Out-File -Encoding utf8` writes one,
+  # and a BOM makes this file unreadable to every other tool that matters here:
+  # Python's json.load raises "Unexpected UTF-8 BOM", and so does jq. The whole
+  # point of the queue is that another device or another agent can read it, so a
+  # BOM quietly breaks the feature.
+  $json = $q | ConvertTo-Json -Depth 8
+  [IO.File]::WriteAllText($QueueFile, $json, (New-Object Text.UTF8Encoding($false)))
+}
 
 $Projects = @{
   ca3     = 'https://amyleesterling.github.io/ca3/'

@@ -42,24 +42,6 @@
                      "started":  null,
                      "finished":  null,
                      "output":  null
-                 },
-                 {
-                     "id":  4,
-                     "project":  "ca3",
-                     "name":  "sync_selftest",
-                     "script":  "D:\\Meshes\\banc_render.py",
-                     "args":  [
-                                  "shot=shotB"
-                              ],
-                     "expect_minutes":  1,
-                     "status":  "queued",
-                     "note":  "sync self test, safe to remove",
-                     "added_by":  "protocol build",
-                     "added_on":  "AURELIUS",
-                     "added":  "2026-07-30T14:39:50",
-                     "started":  null,
-                     "finished":  null,
-                     "output":  null
                  }
              ]
 }

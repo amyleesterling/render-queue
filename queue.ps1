@@ -20,7 +20,7 @@
 
 [CmdletBinding()]
 param(
-  [Parameter(Position = 0)][ValidateSet('status', 'add', 'remove', 'run')]
+  [Parameter(Position = 0)][ValidateSet('status', 'add', 'remove', 'run', 'resume', 'pause')]
   [string]$Command = 'status',
   [string]$Project,
   [string]$Name,
@@ -100,6 +100,7 @@ $Projects = @{
   ca3     = 'https://amyleesterling.github.io/ca3/'
   banc    = 'https://amyleesterling.github.io/banc/'
   microns = 'https://amyleesterling.github.io/microns/'
+  retina  = 'https://amyleesterling.github.io/retina/'
 }
 
 switch ($Command) {
@@ -153,7 +154,29 @@ switch ($Command) {
               Write-Output '      (no frame line yet: still importing geometry)'
             }
           } else {
-            Write-Output '      (started before live logging; no frame count available)'
+            Write-Output '      (no live log for this job)'
+          }
+          # Fallback that needs no log at all: a job writing a PNG sequence can be
+          # counted straight off disk. This is what makes progress answerable for a
+          # run that was started outside the queue, which is exactly when someone
+          # is most likely to ask.
+          $outArg = ''
+          foreach ($a in @($j.args)) { if ($a -like 'out=*') { $outArg = $a -replace '^out=','' } }
+          if ($outArg) {
+            $seq = [IO.Path]::Combine([IO.Path]::GetDirectoryName($outArg),
+                     [IO.Path]::GetFileNameWithoutExtension($outArg) + '_frames')
+            if (Test-Path $seq) {
+              $n = @(Get-ChildItem $seq -Filter *.png -ErrorAction SilentlyContinue).Count
+              $total = 0
+              foreach ($a in @($j.args)) { if ($a -like 'frames=*') { $total = [int]($a -replace 'frames=','') } }
+              if ($n -and $total) {
+                $el = ((Get-Date) - [datetime]$j.started).TotalMinutes
+                Write-Output ('      {0}/{1} frames on disk  {2}%  {3:N0} min elapsed, about {4:N0} min left' -f `
+                  $n, $total, [math]::Round(100*$n/$total), $el, [math]::Round($el/$n*($total-$n)))
+              } elseif ($n) {
+                Write-Output ('      {0} frames on disk' -f $n)
+              }
+            }
           }
         }
       }
@@ -202,6 +225,35 @@ switch ($Command) {
       Say ("removed #{0}" -f $Id)
     } finally { Unlock-Queue }
     Sync-Push ("queue: remove #{0}" -f $Id)
+  }
+
+  # Pausing and resuming were the two things the queue could not do to itself. A
+  # paused job carried a note reading "set status back to queued to restart",
+  # which meant hand editing shared JSON that a nightly task also writes, with no
+  # lock held. These take the same lock every other mutation takes.
+  { $_ -in 'resume', 'pause' } {
+    Sync-Pull
+    if (-not (Lock-Queue)) { break }
+    try {
+      $q = Read-Queue
+      $j = @($q.jobs | Where-Object { $_.id -eq $Id })[0]
+      if (-not $j) { Write-Error ("no job #{0}" -f $Id); return }
+      $was = $j.status
+      # A job that already finished must not be silently re-armed by a typo: a
+      # done job resent to the GPU costs a whole night.
+      if ($Command -eq 'resume' -and $was -eq 'done') {
+        Write-Error ("#{0} {1}/{2} is already done. Remove it and re-add if you really want it rendered again." -f $Id, $j.project, $j.name)
+        return
+      }
+      $j.status = $(if ($Command -eq 'resume') { 'queued' } else { 'paused' })
+      Write-Queue $q
+      Say ("#{0} {1}/{2}: {3} -> {4}" -f $Id, $j.project, $j.name, $was, $j.status)
+      if ($Command -eq 'resume') {
+        Say ("   next nightly run: {0}" -f (Get-ScheduledTask -TaskName 'MeshesRenderQueue' -ErrorAction SilentlyContinue |
+             Get-ScheduledTaskInfo -ErrorAction SilentlyContinue).NextRunTime)
+      }
+    } finally { Unlock-Queue }
+    Sync-Push ("queue: {0} #{1}" -f $Command, $Id)
   }
 
   'run' {

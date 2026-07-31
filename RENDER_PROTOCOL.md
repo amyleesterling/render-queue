@@ -13,7 +13,7 @@ fixes both.
 
 > **If you built an animation, add it to the queue and stop. Do not render it.**
 
-Rendering is the queue's job, at 23:00, when nobody is competing for the GPU.
+Rendering is the queue's job, at 02:00, when nobody is competing for the GPU.
 
 ---
 
@@ -76,12 +76,12 @@ of `queue.ps1` and a row here.
 
 ## The nightly task
 
-`MeshesRenderQueue`, daily at 23:00, ten hour limit, starts late if the machine
+`MeshesRenderQueue`, daily at 02:00, ten hour limit, starts late if the machine
 was asleep. Retime it with:
 
 ```powershell
 Set-ScheduledTask -TaskName MeshesRenderQueue `
-  -Trigger (New-ScheduledTaskTrigger -Daily -At 01:30)
+  -Trigger (New-ScheduledTaskTrigger -Daily -At 03:00)
 ```
 
 ## If something looks stuck

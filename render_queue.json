@@ -1,6 +1,6 @@
 {
     "version":  1,
-    "next_id":  10,
+    "next_id":  11,
     "jobs":  [
                  {
                      "id":  1,
@@ -124,6 +124,27 @@
                      "added_by":  "unattributed",
                      "added_on":  "AURELIUS",
                      "added":  "2026-07-31T10:37:53",
+                     "started":  null,
+                     "finished":  null,
+                     "output":  null
+                 },
+                 {
+                     "id":  10,
+                     "project":  "retina",
+                     "name":  "ds_mosaic_364",
+                     "script":  "D:\\Meshes\\retina_ds_anim.py",
+                     "args":  [
+                                  "frames=576",
+                                  "res=1920x1080",
+                                  "samples=64",
+                                  "out=D:\\Meshes\\renders\\retina_ds364.mp4"
+                              ],
+                     "expect_minutes":  600,
+                     "status":  "queued",
+                     "note":  "All 364 cells, all 106 DS, on the rebuilt meshes_clean library. 43.1M faces. Test still at frame 86 checked: dendrites continuous, no beading. SLOW: 55-60 s/frame plus a 29 min import, about 10 hours. PNG sequence, resumable.",
+                     "added_by":  "unattributed",
+                     "added_on":  "AURELIUS",
+                     "added":  "2026-07-31T19:37:44",
                      "started":  null,
                      "finished":  null,
                      "output":  null

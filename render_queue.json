@@ -1,6 +1,6 @@
 {
     "version":  1,
-    "next_id":  6,
+    "next_id":  7,
     "jobs":  [
                  {
                      "id":  1,
@@ -61,6 +61,27 @@
                      "added_on":  "AURELIUS",
                      "added":  "2026-07-30T22:22:24",
                      "started":  null,
+                     "finished":  null,
+                     "output":  null
+                 },
+                 {
+                     "id":  6,
+                     "project":  "retina",
+                     "name":  "ds_mosaic",
+                     "script":  "D:\\Meshes\\retina_ds_anim.py",
+                     "args":  [
+                                  "frames=576",
+                                  "res=1920x1080",
+                                  "samples=64",
+                                  "out=D:\\Meshes\\renders\\retina_ds.mp4"
+                              ],
+                     "expect_minutes":  45,
+                     "status":  "running",
+                     "note":  "180 calcium-imaged cells, hue = measured preferred direction, brightness = own tuning curve. For a 10am meeting.",
+                     "added_by":  "retina deadline run",
+                     "added_on":  "AURELIUS",
+                     "added":  "2026-07-30T23:06:51",
+                     "started":  "2026-07-30T22:50:04",
                      "finished":  null,
                      "output":  null
                  }

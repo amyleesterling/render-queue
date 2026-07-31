@@ -1,6 +1,6 @@
 {
     "version":  1,
-    "next_id":  5,
+    "next_id":  6,
     "jobs":  [
                  {
                      "id":  1,
@@ -40,6 +40,27 @@
                      "added_by":  "unattributed",
                      "added":  "2026-07-30T14:02:35",
                      "started":  "2026-07-30T22:21:25",
+                     "finished":  null,
+                     "output":  null
+                 },
+                 {
+                     "id":  5,
+                     "project":  "banc",
+                     "name":  "shotB_descending_v2",
+                     "script":  "D:\\Meshes\\banc_shotB_anim.py",
+                     "args":  [
+                                  "frames=576",
+                                  "res=1080x1920",
+                                  "samples=64",
+                                  "out=D:\\Meshes\\renders\\banc_shotB.mp4"
+                              ],
+                     "expect_minutes":  240,
+                     "status":  "queued",
+                     "note":  "PNG sequence then assemble, so an interruption keeps every frame. resumable.",
+                     "added_by":  "after the 3.6h mp4 loss",
+                     "added_on":  "AURELIUS",
+                     "added":  "2026-07-30T22:22:24",
+                     "started":  null,
                      "finished":  null,
                      "output":  null
                  }

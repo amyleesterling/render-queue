@@ -16,7 +16,7 @@
 # first and pushes after, so a phone and a workstation cannot silently diverge.
 #
 # THE ONE RULE: if you built an animation, ADD IT AND STOP. Do not render it.
-# Rendering happens at 23:00 when nothing is competing for the GPU.
+# Rendering happens at 02:00 when nothing is competing for the GPU.
 
 [CmdletBinding()]
 param(

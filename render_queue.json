@@ -1,6 +1,6 @@
 {
     "version":  1,
-    "next_id":  7,
+    "next_id":  8,
     "jobs":  [
                  {
                      "id":  1,
@@ -84,6 +84,27 @@
                      "started":  "2026-07-30T22:50:04",
                      "finished":  "2026-07-30T23:14:31",
                      "output":  "D:\\Meshes\\renders\\retina_ds.mp4"
+                 },
+                 {
+                     "id":  7,
+                     "project":  "retina",
+                     "name":  "ds_mosaic_v3",
+                     "script":  "D:\\Meshes\\retina_ds_anim.py",
+                     "args":  [
+                                  "frames=576",
+                                  "res=1920x1080",
+                                  "samples=64",
+                                  "out=D:\\Meshes\\renders\\retina_ds3.mp4"
+                              ],
+                     "expect_minutes":  45,
+                     "status":  "queued",
+                     "note":  "ghost wireframe by default; cells take colour ONLY at their own best direction. 21/6/7/7/4/1/10/8 per direction. beats checked.",
+                     "added_by":  "after \u0027hard to tell which cells respond\u0027",
+                     "added_on":  "AURELIUS",
+                     "added":  "2026-07-31T09:11:27",
+                     "started":  null,
+                     "finished":  null,
+                     "output":  null
                  }
              ]
 }

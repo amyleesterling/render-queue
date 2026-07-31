@@ -8,7 +8,7 @@ is the rule set.
 ## The one rule
 
 If you built an animation, **add it to the queue and stop**. Do not render it.
-Rendering happens at 23:00 on the machine that owns the GPU.
+Rendering happens at 02:00 on the machine that owns the GPU.
 
 ## From any device
 
@@ -27,7 +27,7 @@ Reading the JSON directly is fine too, and is what a phone or a browser will do.
 
 Only **Aurelius**, the Windows machine with the RTX 3090 and the meshes on `D:`.
 Other devices can queue and inspect; they cannot render. A job added from
-anywhere is picked up by Aurelius' `MeshesRenderQueue` scheduled task at 23:00.
+anywhere is picked up by Aurelius' `MeshesRenderQueue` scheduled task at 02:00.
 
 ## Job status
 

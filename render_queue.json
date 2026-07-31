@@ -35,11 +35,11 @@
                                   "out=D:\\Meshes\\renders\\microns_orbit.mp4"
                               ],
                      "expect_minutes":  110,
-                     "status":  "queued",
+                     "status":  "running",
                      "note":  "orbit 72 deg + descend, per-area decimated 81M faces, framing probed at 3 frames 30 Jul",
                      "added_by":  "unattributed",
                      "added":  "2026-07-30T14:02:35",
-                     "started":  null,
+                     "started":  "2026-07-30T22:21:25",
                      "finished":  null,
                      "output":  null
                  }

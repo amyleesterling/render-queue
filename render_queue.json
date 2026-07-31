@@ -55,8 +55,8 @@
                                   "out=D:\\Meshes\\renders\\banc_shotB.mp4"
                               ],
                      "expect_minutes":  240,
-                     "status":  "running",
-                     "note":  "PNG sequence then assemble, so an interruption keeps every frame. resumable.",
+                     "status":  "paused",
+                     "note":  "PAUSED at 388/576 frames by Amy 31 Jul 09:25. PNG sequence, resumes exactly where it stopped. Set status back to queued to restart.",
                      "added_by":  "after the 3.6h mp4 loss",
                      "added_on":  "AURELIUS",
                      "added":  "2026-07-30T22:22:24",

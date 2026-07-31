@@ -131,6 +131,31 @@ switch ($Command) {
       '  {0,-3} {1,-8} {2,-20} {3,-8} {4,5}  {5}' -f '---','-------','--------------------','-------','---','----'
       foreach ($j in @($q.jobs)) {
         '  {0,-3} {1,-8} {2,-20} {3,-8} {4,5}  {5}' -f $j.id,$j.project,$j.name,$j.status,$j.expect_minutes,$j.note
+        # a running job reports its real frame, read from the live Blender log
+        if ($j.status -eq 'running') {
+          $jl = Join-Path (Split-Path $LogFile -Parent) ("job_{0}.log" -f $j.id)
+          if (Test-Path $jl) {
+            $last = (Select-String -Path $jl -Pattern '^Fra:(\d+)' -AllMatches |
+                     Select-Object -Last 1)
+            $total = 0
+            foreach ($a in @($j.args)) { if ($a -like 'frames=*') { $total = [int]($a -replace 'frames=','') } }
+            if ($last) {
+              $fr = [int]$last.Matches[0].Groups[1].Value
+              $el = ((Get-Date) - [datetime]$j.started).TotalMinutes
+              $line = '      frame {0}' -f $fr
+              if ($total) {
+                $pct = [math]::Round(100 * $fr / $total)
+                $eta = if ($fr -gt 0) { [math]::Round($el / $fr * ($total - $fr)) } else { 0 }
+                $line = '      frame {0}/{1}  {2}%  {3:N0} min elapsed, about {4:N0} min left' -f $fr,$total,$pct,$el,$eta
+              }
+              Write-Output $line
+            } else {
+              Write-Output '      (no frame line yet: still importing geometry)'
+            }
+          } else {
+            Write-Output '      (started before live logging; no frame count available)'
+          }
+        }
       }
       Write-Output ''
       foreach ($s in 'queued','running','done','failed') {
@@ -213,10 +238,25 @@ switch ($Command) {
       Say ("#{0} {1}/{2}: starting, about {3} min" -f $j.id, $j.project, $j.name, $j.expect_minutes)
       $t0 = Get-Date
       $argv = @('--background','--python',$j.script,'--') + @($j.args)
-      & $Blender @argv 2>&1 |
-        Select-String -Pattern 'rendered in|frames in|s/frame|Error|Traceback|DONE' |
-        Select-Object -Last 4 | ForEach-Object { Say ("#{0}:   {1}" -f $j.id, $_.Line.Trim()) }
+
+      # Blender's FULL output goes to a per-job log, unfiltered and unbuffered.
+      # It used to be piped through Select-String | Select-Object -Last 4, which
+      # has to consume the entire stream before emitting anything, so a job in
+      # progress showed nothing at all. "How is it going" had no answer beyond
+      # "the process is alive". Blender prints a `Fra:N` line per frame, so the
+      # log is a live progress counter if you just let it reach disk.
+      $jobLog = Join-Path (Split-Path $LogFile -Parent) ("job_{0}.log" -f $j.id)
+      Say ("#{0}: live progress -> {1}" -f $j.id, $jobLog)
+      $proc = Start-Process -FilePath $Blender -ArgumentList $argv -NoNewWindow -PassThru `
+                            -RedirectStandardOutput $jobLog `
+                            -RedirectStandardError ($jobLog -replace '\.log$', '.err.log')
+      $proc.WaitForExit()
       $mins = [math]::Round(((Get-Date) - $t0).TotalMinutes, 1)
+      foreach ($line in (Get-Content $jobLog -ErrorAction SilentlyContinue |
+                         Select-String -Pattern 'rendered in|frames in|s/frame|Error|Traceback|DONE' |
+                         Select-Object -Last 4)) {
+        Say ("#{0}:   {1}" -f $j.id, $line.Line.Trim())
+      }
 
       $ok = $out -and (Test-Path $out)
       if ($ok) {

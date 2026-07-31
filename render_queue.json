@@ -105,28 +105,6 @@
                      "started":  null,
                      "finished":  null,
                      "output":  null
-                 },
-                 {
-                     "id":  8,
-                     "project":  "microns",
-                     "name":  "cortex_orbit_v2",
-                     "script":  "D:\\Meshes\\microns_column.py",
-                     "args":  [
-                                  "src=D:/Meshes/microns_area",
-                                  "res=1920x1080",
-                                  "samples=64",
-                                  "frames=240",
-                                  "out=D:\\Meshes\\renders\\microns_orbit_v2.mp4"
-                              ],
-                     "expect_minutes":  110,
-                     "status":  "queued",
-                     "note":  "Amy notes: ends looking up not down, and per-cell hue/lightness jitter so cells are separable within the depth ramp. Probed at 3 frames 31 Jul",
-                     "added_by":  "unattributed",
-                     "added_on":  "AURELIUS",
-                     "added":  "2026-07-31T10:28:18",
-                     "started":  null,
-                     "finished":  null,
-                     "output":  null
                  }
              ]
 }

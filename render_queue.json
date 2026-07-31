@@ -76,14 +76,14 @@
                                   "out=D:\\Meshes\\renders\\retina_ds.mp4"
                               ],
                      "expect_minutes":  45,
-                     "status":  "running",
+                     "status":  "done",
                      "note":  "180 calcium-imaged cells, hue = measured preferred direction, brightness = own tuning curve. For a 10am meeting.",
                      "added_by":  "retina deadline run",
                      "added_on":  "AURELIUS",
                      "added":  "2026-07-30T23:06:51",
                      "started":  "2026-07-30T22:50:04",
-                     "finished":  null,
-                     "output":  null
+                     "finished":  "2026-07-30T23:14:31",
+                     "output":  "D:\\Meshes\\renders\\retina_ds.mp4"
                  }
              ]
 }

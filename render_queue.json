@@ -159,14 +159,14 @@
                                   "out=D:\\Meshes\\renders\\microns_orbit_type.mp4"
                               ],
                      "expect_minutes":  110,
-                     "status":  "running",
+                     "status":  "failed",
                      "note":  "Cells coloured by PREDICTED CELL TYPE, not depth. 36 of 38 typed: 11x 23P, 8x 5P-IT, 7x 4P, 7x 5P-ET, 1x 6P-IT, 1 Martinotti, 1 oligodendrocyte. 9 stale root ids resolved forward first. NOT yet checked on a test frame: GPU was saturated by the retina job.",
                      "added_by":  "unattributed",
                      "added_on":  "AURELIUS",
                      "added":  "2026-07-31T23:22:55",
                      "started":  "2026-08-01T02:04:55",
-                     "finished":  null,
-                     "output":  null
+                     "finished":  "2026-08-01T02:05:45",
+                     "output":  "D:\\Meshes\\renders\\microns_orbit_type.mp4"
                  }
              ]
 }

@@ -119,12 +119,12 @@
                                   "out=D:\\Meshes\\renders\\microns_orbit_v2.mp4"
                               ],
                      "expect_minutes":  110,
-                     "status":  "queued",
+                     "status":  "running",
                      "note":  "camera ends tilted up, aiming mid column not below it. NO colour jitter, Amy does not want it: pure depth ramp.",
                      "added_by":  "unattributed",
                      "added_on":  "AURELIUS",
                      "added":  "2026-07-31T10:37:53",
-                     "started":  null,
+                     "started":  "2026-07-31T21:58:21",
                      "finished":  null,
                      "output":  null
                  },

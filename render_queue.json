@@ -140,12 +140,12 @@
                                   "out=D:\\Meshes\\renders\\retina_ds364.mp4"
                               ],
                      "expect_minutes":  600,
-                     "status":  "queued",
+                     "status":  "running",
                      "note":  "All 364 cells, all 106 DS, on the rebuilt meshes_clean library. 43.1M faces. Test still at frame 86 checked: dendrites continuous, no beading. SLOW: 55-60 s/frame plus a 29 min import, about 10 hours. PNG sequence, resumable.",
                      "added_by":  "unattributed",
                      "added_on":  "AURELIUS",
                      "added":  "2026-07-31T19:37:44",
-                     "started":  null,
+                     "started":  "2026-07-31T22:09:32",
                      "finished":  null,
                      "output":  null
                  }

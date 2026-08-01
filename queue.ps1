@@ -291,6 +291,30 @@ switch ($Command) {
       $t0 = Get-Date
       $argv = @('--background','--python',$j.script,'--') + @($j.args)
 
+      # RETRY, because a crash used to end the job and the night with it. On
+      # 1 Aug 2026 BANC died at 22:00 and retina at 01:50, both inside EEVEE's
+      # velocity module, and the GPU then sat idle until 08:00 with two jobs
+      # still wanting it. Nothing tried again.
+      #
+      # Retrying is cheap here specifically because every long job writes a PNG
+      # sequence and skips frames already on disk, so attempt two continues from
+      # where attempt one died rather than starting over.
+      #
+      # THE GUARD IS PROGRESS, NOT A COUNT. A job that crashes having rendered
+      # nothing will crash again the same way, and retrying it three times just
+      # burns the night more thoroughly. So a retry only happens if the previous
+      # attempt actually produced frames. A hard failure stops after one go; a
+      # crash partway through a long render keeps being resumed.
+      $seqDir = if ($out) { [IO.Path]::Combine([IO.Path]::GetDirectoryName($out),
+                  [IO.Path]::GetFileNameWithoutExtension($out) + '_frames') } else { $null }
+      function Frame-Count($d) {
+        if ($d -and (Test-Path $d)) { return @(Get-ChildItem $d -Filter *.png -ErrorAction SilentlyContinue).Count }
+        return 0
+      }
+      $MAX_ATTEMPTS = 4
+      $attempt = 0
+      $ok = $false
+
       # Blender's FULL output goes to a per-job log, unfiltered and unbuffered.
       # It used to be piped through Select-String | Select-Object -Last 4, which
       # has to consume the entire stream before emitting anything, so a job in
@@ -299,18 +323,35 @@ switch ($Command) {
       # log is a live progress counter if you just let it reach disk.
       $jobLog = Join-Path (Split-Path $LogFile -Parent) ("job_{0}.log" -f $j.id)
       Say ("#{0}: live progress -> {1}" -f $j.id, $jobLog)
-      $proc = Start-Process -FilePath $Blender -ArgumentList $argv -NoNewWindow -PassThru `
-                            -RedirectStandardOutput $jobLog `
-                            -RedirectStandardError ($jobLog -replace '\.log$', '.err.log')
-      $proc.WaitForExit()
-      $mins = [math]::Round(((Get-Date) - $t0).TotalMinutes, 1)
-      foreach ($line in (Get-Content $jobLog -ErrorAction SilentlyContinue |
-                         Select-String -Pattern 'rendered in|frames in|s/frame|Error|Traceback|DONE' |
-                         Select-Object -Last 4)) {
-        Say ("#{0}:   {1}" -f $j.id, $line.Line.Trim())
-      }
 
-      $ok = $out -and (Test-Path $out)
+      while (-not $ok -and $attempt -lt $MAX_ATTEMPTS) {
+        $attempt++
+        $before = Frame-Count $seqDir
+        if ($attempt -gt 1) {
+          Say ("#{0}: attempt {1} of {2}, resuming from {3} frame(s)" -f $j.id, $attempt, $MAX_ATTEMPTS, $before)
+        }
+        # Each attempt gets its own log, or attempt two overwrites the evidence of
+        # why attempt one died.
+        $thisLog = if ($attempt -eq 1) { $jobLog } else { $jobLog -replace '\.log$', ".try$attempt.log" }
+        $proc = Start-Process -FilePath $Blender -ArgumentList $argv -NoNewWindow -PassThru `
+                              -RedirectStandardOutput $thisLog `
+                              -RedirectStandardError ($thisLog -replace '\.log$', '.err.log')
+        $proc.WaitForExit()
+        foreach ($line in (Get-Content $thisLog -ErrorAction SilentlyContinue |
+                           Select-String -Pattern 'rendered in|frames in|s/frame|Error|Traceback|EXCEPTION|DONE' |
+                           Select-Object -Last 4)) {
+          Say ("#{0}:   {1}" -f $j.id, $line.Line.Trim())
+        }
+        $ok = $out -and (Test-Path $out)
+        if ($ok) { break }
+        $after = Frame-Count $seqDir
+        if ($after -le $before) {
+          Say ("#{0}: attempt {1} produced no new frames ({2}), not retrying" -f $j.id, $attempt, $after)
+          break
+        }
+        Say ("#{0}: attempt {1} died after {2} new frame(s), retrying" -f $j.id, $attempt, ($after - $before))
+      }
+      $mins = [math]::Round(((Get-Date) - $t0).TotalMinutes, 1)
       if ($ok) {
         Say ("#{0}: DONE in {1} min, {2} MB" -f $j.id, $mins, [math]::Round((Get-Item $out).Length/1MB,1))
         if ($out -like '*.mp4') {

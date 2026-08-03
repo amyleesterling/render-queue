@@ -1,6 +1,6 @@
 {
     "version":  1,
-    "next_id":  12,
+    "next_id":  13,
     "jobs":  [
                  {
                      "id":  1,
@@ -167,6 +167,27 @@
                      "started":  "2026-08-02T14:56:05",
                      "finished":  "2026-08-02T14:56:50",
                      "output":  "D:\\Meshes\\renders\\microns_orbit_type.mp4"
+                 },
+                 {
+                     "id":  12,
+                     "project":  "banc",
+                     "name":  "shotB_relabelled",
+                     "script":  "D:\\Meshes\\banc_shotB_anim.py",
+                     "args":  [
+                                  "frames=576",
+                                  "res=1080x1920",
+                                  "samples=64",
+                                  "out=D:\\Meshes\\renders\\banc_shotB_v3.mp4"
+                              ],
+                     "expect_minutes":  90,
+                     "status":  "queued",
+                     "note":  "Retimed: opening hold 3.4s -\u003e 1.0s and the second dead hold removed, measured frame difference was under 0.005 in both. Alpha switched BLEND -\u003e HASHED: the white DN was dropping to zero visible pixels on single frames between 15-17s because EEVEE sorts blended surfaces per object. Labels come from shotB_beats.json which the render itself writes.",
+                     "added_by":  "unattributed",
+                     "added_on":  "AURELIUS",
+                     "added":  "2026-08-03T10:08:33",
+                     "started":  null,
+                     "finished":  null,
+                     "output":  null
                  }
              ]
 }

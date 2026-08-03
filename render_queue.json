@@ -1,6 +1,6 @@
 {
     "version":  1,
-    "next_id":  13,
+    "next_id":  14,
     "jobs":  [
                  {
                      "id":  1,
@@ -185,6 +185,27 @@
                      "added_by":  "unattributed",
                      "added_on":  "AURELIUS",
                      "added":  "2026-08-03T10:08:33",
+                     "started":  null,
+                     "finished":  null,
+                     "output":  null
+                 },
+                 {
+                     "id":  13,
+                     "project":  "spider",
+                     "name":  "spider_walk_1080",
+                     "script":  "C:\\Users\\amyle\\spider-rig\\render_shot.py",
+                     "args":  [
+                                  "frames=120",
+                                  "res=1920x1080",
+                                  "samples=64",
+                                  "out=C:\\Users\\amyle\\spider-rig\\renders\\spider_walk_1080.mp4"
+                              ],
+                     "expect_minutes":  45,
+                     "status":  "queued",
+                     "note":  "Cute plush spider 8-leg walk cycle. Gait verified numerically over all 120 frames: worst IK miss 0.0033, worst planted-foot slip 0.0033 units on a 1.9-unit spider, so no skating. Beats checked as stills at frames 1,4,8,12 and as two storyboards (gait cycle + locked-off travel). Silhouette measured constant across the shot while the centre travels 511px evenly.",
+                     "added_by":  "chat: spider rig",
+                     "added_on":  "AURELIUS",
+                     "added":  "2026-08-03T16:33:38",
                      "started":  null,
                      "finished":  null,
                      "output":  null

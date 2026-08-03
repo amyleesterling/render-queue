@@ -1,6 +1,6 @@
 {
     "version":  1,
-    "next_id":  14,
+    "next_id":  15,
     "jobs":  [
                  {
                      "id":  1,
@@ -206,6 +206,28 @@
                      "added_by":  "chat: spider rig",
                      "added_on":  "AURELIUS",
                      "added":  "2026-08-03T16:33:38",
+                     "started":  null,
+                     "finished":  null,
+                     "output":  null
+                 },
+                 {
+                     "id":  14,
+                     "project":  "spider",
+                     "name":  "spider_approach_1080",
+                     "script":  "C:\\Users\\amyle\\spider-rig\\render_shot.py",
+                     "args":  [
+                                  "blend=C:\\Users\\amyle\\spider-rig\\spider_approach.blend",
+                                  "frames=180",
+                                  "res=1920x1080",
+                                  "samples=64",
+                                  "out=C:\\Users\\amyle\\spider-rig\\renders\\spider_approach_1080.mp4"
+                              ],
+                     "expect_minutes":  70,
+                     "status":  "queued",
+                     "note":  "Spider walks straight into a locked camera, 180 frames / 7.5s, grows 29 to 60 pct of frame width. Exposure fixed: old setup measured mean 0.80 with 52 pct of pixels blown, now mean 0.42 with zero blown. Lights-off control render confirms nothing self-illuminates. Framing checked at frames 1/90/150/180, nothing clips. Gait verified: worst IK miss 0.0033, worst foot slip 0.0033.",
+                     "added_by":  "chat: spider rig",
+                     "added_on":  "AURELIUS",
+                     "added":  "2026-08-03T16:42:09",
                      "started":  null,
                      "finished":  null,
                      "output":  null

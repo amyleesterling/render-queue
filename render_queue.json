@@ -180,12 +180,12 @@
                                   "out=D:\\Meshes\\renders\\banc_shotB_v3.mp4"
                               ],
                      "expect_minutes":  90,
-                     "status":  "queued",
+                     "status":  "running",
                      "note":  "Retimed: opening hold 3.4s -\u003e 1.0s and the second dead hold removed, measured frame difference was under 0.005 in both. Alpha switched BLEND -\u003e HASHED: the white DN was dropping to zero visible pixels on single frames between 15-17s because EEVEE sorts blended surfaces per object. Labels come from shotB_beats.json which the render itself writes.",
                      "added_by":  "unattributed",
                      "added_on":  "AURELIUS",
                      "added":  "2026-08-03T10:08:33",
-                     "started":  null,
+                     "started":  "2026-08-03T21:33:41",
                      "finished":  null,
                      "output":  null
                  }

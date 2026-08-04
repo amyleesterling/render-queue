@@ -1,6 +1,6 @@
 {
     "version":  1,
-    "next_id":  17,
+    "next_id":  18,
     "jobs":  [
                  {
                      "id":  1,
@@ -250,6 +250,28 @@
                      "added_by":  "chat: spider rig",
                      "added_on":  "AURELIUS",
                      "added":  "2026-08-03T17:04:25",
+                     "started":  null,
+                     "finished":  null,
+                     "output":  null
+                 },
+                 {
+                     "id":  17,
+                     "project":  "spider",
+                     "name":  "spider_loop_front_slow",
+                     "script":  "C:\\Users\\amyle\\spider-rig\\render_shot.py",
+                     "args":  [
+                                  "blend=C:\\Users\\amyle\\spider-rig\\spider_loop_front.blend",
+                                  "frames=72",
+                                  "res=1920x1080",
+                                  "samples=64",
+                                  "out=C:\\Users\\amyle\\spider-rig\\renders\\spider_loop_front_1080.mp4"
+                              ],
+                     "expect_minutes":  30,
+                     "status":  "queued",
+                     "note":  "HEAD-ON SEAMLESS LOOP, SLOWED. Cadence 24 frames per stride (1.00s), was 15 (0.625s). 72 frames / 3s, 3 gait cycles. Seam verified frame 73 vs 1: reported SEAMLESS. Ground calibrated to #4f9478. Replaces job 16 which was the faster cadence.",
+                     "added_by":  "chat: spider rig",
+                     "added_on":  "AURELIUS",
+                     "added":  "2026-08-03T20:49:15",
                      "started":  null,
                      "finished":  null,
                      "output":  null

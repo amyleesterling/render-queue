@@ -190,28 +190,6 @@
                      "output":  null
                  },
                  {
-                     "id":  15,
-                     "project":  "spider",
-                     "name":  "spider_loop_1080",
-                     "script":  "C:\\Users\\amyle\\spider-rig\\render_shot.py",
-                     "args":  [
-                                  "blend=C:\\Users\\amyle\\spider-rig\\spider_loop.blend",
-                                  "frames=60",
-                                  "res=1920x1080",
-                                  "samples=64",
-                                  "out=C:\\Users\\amyle\\spider-rig\\renders\\spider_loop_1080.mp4"
-                              ],
-                     "expect_minutes":  25,
-                     "status":  "queued",
-                     "note":  "SEAMLESS LOOP for the BE THE FLY experience. 60 frames / 2.5s, four gait cycles. Seam verified by rendering frame 61 and diffing against frame 1: mean 0.000043, only 73 of 518400 pixels differ by 3/255, which is EEVEE raytrace reseeding not motion. Ground calibrated to render at exactly #4f9478 to match Amy green field bg; sky #9cceeb. Ground parented to camera rig so the horizon cannot creep.",
-                     "added_by":  "chat: spider rig",
-                     "added_on":  "AURELIUS",
-                     "added":  "2026-08-03T17:04:25",
-                     "started":  null,
-                     "finished":  null,
-                     "output":  null
-                 },
-                 {
                      "id":  17,
                      "project":  "spider",
                      "name":  "spider_loop_front_slow",

@@ -253,28 +253,6 @@
                      "started":  null,
                      "finished":  null,
                      "output":  null
-                 },
-                 {
-                     "id":  16,
-                     "project":  "spider",
-                     "name":  "spider_loop_front_1080",
-                     "script":  "C:\\Users\\amyle\\spider-rig\\render_shot.py",
-                     "args":  [
-                                  "blend=C:\\Users\\amyle\\spider-rig\\spider_loop_front.blend",
-                                  "frames=60",
-                                  "res=1920x1080",
-                                  "samples=64",
-                                  "out=C:\\Users\\amyle\\spider-rig\\renders\\spider_loop_front_1080.mp4"
-                              ],
-                     "expect_minutes":  25,
-                     "status":  "queued",
-                     "note":  "HEAD-ON SEAMLESS LOOP: spider walks straight into the lens, camera holds station ahead of her so size is constant and the loop can wrap. 60 frames / 2.5s, 4 gait cycles. Seam verified frame 61 vs frame 1: mean 0.000051, 93 of 518400 px differ by 3/255 (EEVEE raytrace reseed, not motion). Framing measured over the loop: 61-66 pct of frame width, nothing clips. Ground renders at #4f9478 to match the BE THE FLY green field.",
-                     "added_by":  "chat: spider rig",
-                     "added_on":  "AURELIUS",
-                     "added":  "2026-08-03T18:45:58",
-                     "started":  null,
-                     "finished":  null,
-                     "output":  null
                  }
              ]
 }

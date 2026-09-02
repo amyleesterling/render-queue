@@ -1,8 +1,18 @@
 # Mobile renders site
 
-A phone-first gallery of every finished **vertical** (portrait) render in the
-queue. `index.html` reads `videos/manifest.json` and shows one 9:16 video per
-card — autoplaying whichever is on screen, with project filter chips.
+A phone-first gallery of the vertical / mobile renders — one 9:16 card per
+video, section filter chips. Two sources:
+
+- **`videos/manifest.json`** — finished portrait renders from the render
+  queue, copied in as real files by the collect script below.
+- **`videos/drive.json`** — the earlier vertical/mobile renders (2021-2025:
+  the named `*_vertical` / `*mobile*` set, CA3, synapse, and build-in
+  animations) played as Google Drive embeds straight from the archive
+  folder "amy sterling videos file as of oct 11 2025". Nothing is copied;
+  entries are just `{id, title, year}` and are easy to add or prune.
+  Drive embeds play for anyone signed into an account with access to the
+  files (your phone, signed into your Google account, works). To make them
+  playable for others, share the files or folder with them.
 
 ## Updating it (on Aurelius)
 

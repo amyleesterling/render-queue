@@ -1,0 +1,594 @@
+{
+  "source": "precomputed mesh layer gs://lee-lab_brain-and-nerve-cord-fly-connectome/neuron_meshes (public BANC release; segment_properties snapshot 2026-09-01)",
+  "coordinates": "nanometers",
+  "groups": [
+    {
+      "group": "forward_walking_DNg100",
+      "color": "#00d26a",
+      "core": true,
+      "cells": [
+        {
+          "cell_type": "DNg100",
+          "root_id": "720575941626500746",
+          "side": "left"
+        },
+        {
+          "cell_type": "DNg100",
+          "root_id": "720575941500851362",
+          "side": "right"
+        }
+      ]
+    },
+    {
+      "group": "turn_left_DNa02",
+      "color": "#2979ff",
+      "core": true,
+      "cells": [
+        {
+          "cell_type": "DNa02",
+          "root_id": "720575941510475536",
+          "side": "left"
+        }
+      ]
+    },
+    {
+      "group": "turn_right_DNa02",
+      "color": "#ff9500",
+      "core": true,
+      "cells": [
+        {
+          "cell_type": "DNa02",
+          "root_id": "720575941456897005",
+          "side": "right"
+        }
+      ]
+    },
+    {
+      "group": "grooming_DNg11",
+      "color": "#ff5ce1",
+      "core": true,
+      "cells": [
+        {
+          "cell_type": "DNg11",
+          "root_id": "720575941533807082",
+          "side": "left"
+        },
+        {
+          "cell_type": "DNg11",
+          "root_id": "720575941655117012",
+          "side": "right"
+        },
+        {
+          "cell_type": "DNg11",
+          "root_id": "720575941439740895",
+          "side": "left"
+        },
+        {
+          "cell_type": "DNg11",
+          "root_id": "720575941448922717",
+          "side": "right"
+        },
+        {
+          "cell_type": "DNg11",
+          "root_id": "720575941438719967",
+          "side": "left"
+        }
+      ]
+    },
+    {
+      "group": "escape_DNp01_giant_fiber",
+      "color": "#ff3b30",
+      "core": true,
+      "cells": [
+        {
+          "cell_type": "DNp01",
+          "root_id": "720575941509145950",
+          "side": "left"
+        },
+        {
+          "cell_type": "DNp01",
+          "root_id": "720575941451068597",
+          "side": "right"
+        }
+      ]
+    },
+    {
+      "group": "takeoff_DNp11",
+      "color": "#ffd60a",
+      "core": true,
+      "cells": [
+        {
+          "cell_type": "DNp11",
+          "root_id": "720575941551589181",
+          "side": "left"
+        },
+        {
+          "cell_type": "DNp11",
+          "root_id": "720575941478215985",
+          "side": "right"
+        }
+      ]
+    },
+    {
+      "group": "landing_DNp10",
+      "color": "#00e0c6",
+      "core": true,
+      "cells": [
+        {
+          "cell_type": "DNp10",
+          "root_id": "720575941593683051",
+          "side": "right"
+        },
+        {
+          "cell_type": "DNp10",
+          "root_id": "720575941440683743",
+          "side": "left"
+        }
+      ]
+    },
+    {
+      "group": "compass_EPG",
+      "color": "#bd9bd1",
+      "core": false,
+      "cells": [
+        {
+          "cell_type": "EPG",
+          "root_id": "720575941432144632",
+          "side": "left"
+        },
+        {
+          "cell_type": "EPG",
+          "root_id": "720575941575965800",
+          "side": "right"
+        },
+        {
+          "cell_type": "EPG",
+          "root_id": "720575941574135912",
+          "side": "right"
+        },
+        {
+          "cell_type": "EPG",
+          "root_id": "720575941535506698",
+          "side": "left"
+        },
+        {
+          "cell_type": "EPG",
+          "root_id": "720575941536820629",
+          "side": "left"
+        },
+        {
+          "cell_type": "EPG",
+          "root_id": "720575941601934521",
+          "side": "left"
+        },
+        {
+          "cell_type": "EPG",
+          "root_id": "720575941401716003",
+          "side": "left"
+        },
+        {
+          "cell_type": "EPG",
+          "root_id": "720575941412066961",
+          "side": "left"
+        },
+        {
+          "cell_type": "EPG",
+          "root_id": "720575941553465939",
+          "side": "left"
+        },
+        {
+          "cell_type": "EPG",
+          "root_id": "720575941483979842",
+          "side": "left"
+        },
+        {
+          "cell_type": "EPG",
+          "root_id": "720575941547561588",
+          "side": "left"
+        },
+        {
+          "cell_type": "EPG",
+          "root_id": "720575941353100336",
+          "side": "left"
+        },
+        {
+          "cell_type": "EPG",
+          "root_id": "720575941433596192",
+          "side": "left"
+        },
+        {
+          "cell_type": "EPG",
+          "root_id": "720575941533800792",
+          "side": "left"
+        },
+        {
+          "cell_type": "EPG",
+          "root_id": "720575941475541825",
+          "side": "left"
+        },
+        {
+          "cell_type": "EPG",
+          "root_id": "720575941472363818",
+          "side": "left"
+        },
+        {
+          "cell_type": "EPG",
+          "root_id": "720575941469187703",
+          "side": "left"
+        },
+        {
+          "cell_type": "EPG",
+          "root_id": "720575941685212655",
+          "side": "left"
+        },
+        {
+          "cell_type": "EPG",
+          "root_id": "720575941521625847",
+          "side": "left"
+        },
+        {
+          "cell_type": "EPG",
+          "root_id": "720575941572937288",
+          "side": "left"
+        },
+        {
+          "cell_type": "EPG",
+          "root_id": "720575941686438006",
+          "side": "left"
+        },
+        {
+          "cell_type": "EPG",
+          "root_id": "720575941579379321",
+          "side": "left"
+        },
+        {
+          "cell_type": "EPG",
+          "root_id": "720575941456244208",
+          "side": "left"
+        },
+        {
+          "cell_type": "EPG",
+          "root_id": "720575941460051270",
+          "side": "left"
+        },
+        {
+          "cell_type": "EPG",
+          "root_id": "720575941557402350",
+          "side": "right"
+        },
+        {
+          "cell_type": "EPG",
+          "root_id": "720575941592825558",
+          "side": "right"
+        },
+        {
+          "cell_type": "EPG",
+          "root_id": "720575941439306587",
+          "side": "right"
+        },
+        {
+          "cell_type": "EPG",
+          "root_id": "720575941573294088",
+          "side": "right"
+        },
+        {
+          "cell_type": "EPG",
+          "root_id": "720575941546910241",
+          "side": "right"
+        },
+        {
+          "cell_type": "EPG",
+          "root_id": "720575941556150500",
+          "side": "right"
+        },
+        {
+          "cell_type": "EPG",
+          "root_id": "720575941496157639",
+          "side": "right"
+        },
+        {
+          "cell_type": "EPG",
+          "root_id": "720575941474920234",
+          "side": "right"
+        },
+        {
+          "cell_type": "EPG",
+          "root_id": "720575941405938735",
+          "side": "right"
+        },
+        {
+          "cell_type": "EPG",
+          "root_id": "720575941730684971",
+          "side": "right"
+        },
+        {
+          "cell_type": "EPG",
+          "root_id": "720575941551738247",
+          "side": "right"
+        },
+        {
+          "cell_type": "EPG",
+          "root_id": "720575941654968532",
+          "side": "right"
+        },
+        {
+          "cell_type": "EPG",
+          "root_id": "720575941609869741",
+          "side": "right"
+        },
+        {
+          "cell_type": "EPG",
+          "root_id": "720575941429594327",
+          "side": "right"
+        },
+        {
+          "cell_type": "EPG",
+          "root_id": "720575941408776239",
+          "side": "right"
+        },
+        {
+          "cell_type": "EPG",
+          "root_id": "720575941632499616",
+          "side": "right"
+        },
+        {
+          "cell_type": "EPG",
+          "root_id": "720575941552623873",
+          "side": "right"
+        },
+        {
+          "cell_type": "EPG",
+          "root_id": "720575941588727436",
+          "side": "right"
+        },
+        {
+          "cell_type": "EPG",
+          "root_id": "720575941566154599",
+          "side": "right"
+        },
+        {
+          "cell_type": "EPG",
+          "root_id": "720575941515235587",
+          "side": "left"
+        },
+        {
+          "cell_type": "EPG",
+          "root_id": "720575941412215407",
+          "side": "right"
+        }
+      ]
+    },
+    {
+      "group": "alt_grooming_DNg12",
+      "color": "#9457eb",
+      "core": false,
+      "cells": [
+        {
+          "cell_type": "DNg12_a",
+          "root_id": "720575941493928064",
+          "side": "right"
+        },
+        {
+          "cell_type": "DNg12_a",
+          "root_id": "720575941547473268",
+          "side": "left"
+        },
+        {
+          "cell_type": "DNg12_a",
+          "root_id": "720575941535811562",
+          "side": "left"
+        },
+        {
+          "cell_type": "DNg12_a",
+          "root_id": "720575941536326805",
+          "side": "left"
+        },
+        {
+          "cell_type": "DNg12_a",
+          "root_id": "720575941489195724",
+          "side": "left"
+        },
+        {
+          "cell_type": "DNg12_a",
+          "root_id": "720575941557512307",
+          "side": "right"
+        },
+        {
+          "cell_type": "DNg12_a",
+          "root_id": "720575941572392201",
+          "side": "left"
+        },
+        {
+          "cell_type": "DNg12_a",
+          "root_id": "720575941629386732",
+          "side": "left"
+        },
+        {
+          "cell_type": "DNg12_a",
+          "root_id": "720575941429383521",
+          "side": "left"
+        },
+        {
+          "cell_type": "DNg12_a",
+          "root_id": "720575941465737814",
+          "side": "left"
+        },
+        {
+          "cell_type": "DNg12_a",
+          "root_id": "720575941454124781",
+          "side": "left"
+        },
+        {
+          "cell_type": "DNg12_b",
+          "root_id": "720575941428365193",
+          "side": "right"
+        },
+        {
+          "cell_type": "DNg12_b",
+          "root_id": "720575941480105039",
+          "side": "right"
+        },
+        {
+          "cell_type": "DNg12_b",
+          "root_id": "720575941563064071",
+          "side": "right"
+        },
+        {
+          "cell_type": "DNg12_b",
+          "root_id": "720575941480673154",
+          "side": "right"
+        },
+        {
+          "cell_type": "DNg12_b",
+          "root_id": "720575941501608939",
+          "side": "right"
+        },
+        {
+          "cell_type": "DNg12_b",
+          "root_id": "720575941510509072",
+          "side": "left"
+        },
+        {
+          "cell_type": "DNg12_e",
+          "root_id": "720575941518261932",
+          "side": "right"
+        },
+        {
+          "cell_type": "DNg12_e",
+          "root_id": "720575941588123902",
+          "side": "right"
+        },
+        {
+          "cell_type": "DNg12_e",
+          "root_id": "720575941433235744",
+          "side": "right"
+        },
+        {
+          "cell_type": "DNg12_e",
+          "root_id": "720575941545120361",
+          "side": "left"
+        },
+        {
+          "cell_type": "DNg12_e",
+          "root_id": "720575941652493524",
+          "side": "right"
+        },
+        {
+          "cell_type": "DNg12_e",
+          "root_id": "720575941412623215",
+          "side": "left"
+        },
+        {
+          "cell_type": "DNg12_e",
+          "root_id": "720575941554354259",
+          "side": "left"
+        },
+        {
+          "cell_type": "DNg12_e",
+          "root_id": "720575941642868385",
+          "side": "right"
+        },
+        {
+          "cell_type": "DNg12_e",
+          "root_id": "720575941399380515",
+          "side": "right"
+        },
+        {
+          "cell_type": "DNg12_e",
+          "root_id": "720575941480942499",
+          "side": "left"
+        },
+        {
+          "cell_type": "DNg12_e",
+          "root_id": "720575941446894612",
+          "side": "left"
+        },
+        {
+          "cell_type": "DNg12_e",
+          "root_id": "720575941479434720",
+          "side": "left"
+        },
+        {
+          "cell_type": "DNg12_e",
+          "root_id": "720575941626302858",
+          "side": "left"
+        },
+        {
+          "cell_type": "DNg12_e",
+          "root_id": "720575941554228481",
+          "side": "left"
+        },
+        {
+          "cell_type": "DNg12_e",
+          "root_id": "720575941439919295",
+          "side": "right"
+        },
+        {
+          "cell_type": "DNg12_e",
+          "root_id": "720575941537718653",
+          "side": "right"
+        },
+        {
+          "cell_type": "DNg12_e",
+          "root_id": "720575941569306874",
+          "side": "left"
+        },
+        {
+          "cell_type": "DNg12_e",
+          "root_id": "720575941531334373",
+          "side": "left"
+        },
+        {
+          "cell_type": "DNg12_e",
+          "root_id": "720575941513793612",
+          "side": "right"
+        },
+        {
+          "cell_type": "DNg12_e",
+          "root_id": "720575941489036494",
+          "side": "left"
+        },
+        {
+          "cell_type": "DNg12_e",
+          "root_id": "720575941589678078",
+          "side": "left"
+        },
+        {
+          "cell_type": "DNg12_e",
+          "root_id": "720575941577482585",
+          "side": "left"
+        },
+        {
+          "cell_type": "DNg12_e",
+          "root_id": "720575941456665581",
+          "side": "left"
+        },
+        {
+          "cell_type": "DNg12_e",
+          "root_id": "720575941563201687",
+          "side": "left"
+        },
+        {
+          "cell_type": "DNg12_c",
+          "root_id": "720575941551093639",
+          "side": "left"
+        },
+        {
+          "cell_type": "DNg12_c",
+          "root_id": "720575941730244651",
+          "side": "right"
+        },
+        {
+          "cell_type": "DNg12_d",
+          "root_id": "720575941580309081",
+          "side": "right"
+        },
+        {
+          "cell_type": "DNg12_d",
+          "root_id": "720575941666925745",
+          "side": "right"
+        }
+      ]
+    }
+  ]
+}

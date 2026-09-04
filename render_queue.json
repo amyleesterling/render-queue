@@ -1,6 +1,6 @@
 {
     "version":  1,
-    "next_id":  18,
+    "next_id":  19,
     "jobs":  [
                  {
                      "id":  1,
@@ -188,6 +188,25 @@
                      "started":  "2026-08-03T21:33:41",
                      "finished":  "2026-08-04T03:15:03",
                      "output":  "D:\\Meshes\\renders\\banc_shotB_v3.mp4"
+                 },
+                 {
+                     "id":  18,
+                     "project":  "brain",
+                     "name":  "hairy_brain_360",
+                     "script":  "D:\\Meshes\\hairy_brain_360.py",
+                     "args":  [
+                                  "frames=360",
+                                  "out=D:\\Meshes\\renders\\hairy_brain_360.mp4"
+                              ],
+                     "expect_minutes":  110,
+                     "status":  "queued",
+                     "note":  "Pial surface + 2.4M direction-coloured hair strands, Cycles, 360 turntable 15 s at 24 fps. Beats 100 and 250 checked at 1920x1080/128 samples: gyri legible, colours right, shadow catcher floor. 16 s/frame measured.",
+                     "added_by":  "chat: hairy brain 360",
+                     "added_on":  "AURELIUS",
+                     "added":  "2026-09-04T12:07:07",
+                     "started":  null,
+                     "finished":  null,
+                     "output":  null
                  }
              ]
 }

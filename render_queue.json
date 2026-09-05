@@ -199,12 +199,12 @@
                                   "out=D:\\Meshes\\renders\\hairy_brain_360.mp4"
                               ],
                      "expect_minutes":  110,
-                     "status":  "queued",
+                     "status":  "running",
                      "note":  "Pial surface + 2.4M direction-coloured hair strands, Cycles, 360 turntable 15 s at 24 fps. Beats 100 and 250 checked at 1920x1080/128 samples: gyri legible, colours right, shadow catcher floor. 16 s/frame measured.",
                      "added_by":  "chat: hairy brain 360",
                      "added_on":  "AURELIUS",
                      "added":  "2026-09-04T12:07:07",
-                     "started":  null,
+                     "started":  "2026-09-05T02:00:06",
                      "finished":  null,
                      "output":  null
                  }

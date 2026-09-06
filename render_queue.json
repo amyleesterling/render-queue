@@ -1,6 +1,6 @@
 {
     "version":  1,
-    "next_id":  19,
+    "next_id":  20,
     "jobs":  [
                  {
                      "id":  1,
@@ -207,6 +207,31 @@
                      "started":  "2026-09-05T02:00:06",
                      "finished":  "2026-09-05T03:14:01",
                      "output":  "D:\\Meshes\\renders\\hairy_brain_360.mp4"
+                 },
+                 {
+                     "id":  19,
+                     "project":  "brain",
+                     "name":  "hairy_brain_360_golddots",
+                     "script":  "D:\\Meshes\\hairy_brain_360.py",
+                     "args":  [
+                                  "frames=360",
+                                  "style=holo_dots",
+                                  "holocol=gold",
+                                  "strands=2000000",
+                                  "dotglow=1.8",
+                                  "camh=50",
+                                  "camdist=1.4",
+                                  "out=D:\\Meshes\\renders\\hairy_brain_360_golddots.mp4"
+                              ],
+                     "expect_minutes":  110,
+                     "status":  "queued",
+                     "note":  "Golden dot hologram, camera level with brain centre, 1.4x back (longer lens). Height sweep 0-100% checked as stills 5 Sept. ~14 s/frame.",
+                     "added_by":  "chat: hairy brain",
+                     "added_on":  "AURELIUS",
+                     "added":  "2026-09-05T21:18:36",
+                     "started":  null,
+                     "finished":  null,
+                     "output":  null
                  }
              ]
 }

@@ -224,12 +224,12 @@
                                   "out=D:\\Meshes\\renders\\hairy_brain_360_golddots.mp4"
                               ],
                      "expect_minutes":  110,
-                     "status":  "queued",
+                     "status":  "running",
                      "note":  "Golden dot hologram, camera level with brain centre, 1.4x back (longer lens). Height sweep 0-100% checked as stills 5 Sept. ~14 s/frame.",
                      "added_by":  "chat: hairy brain",
                      "added_on":  "AURELIUS",
                      "added":  "2026-09-05T21:18:36",
-                     "started":  null,
+                     "started":  "2026-09-06T02:00:06",
                      "finished":  null,
                      "output":  null
                  },

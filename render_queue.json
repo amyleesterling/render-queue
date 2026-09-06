@@ -249,12 +249,12 @@
                                   "out=D:\\Meshes\\renders\\hairy_brain_360_monstersinc.mp4"
                               ],
                      "expect_minutes":  100,
-                     "status":  "queued",
+                     "status":  "running",
                      "note":  "Pink/purple/blue/gold fur, 2 mm, lights parented to the camera rig so they travel with it. Beats 1/120/240 checked as stills 5 Sept. ~11 s/frame.",
                      "added_by":  "chat: hairy brain",
                      "added_on":  "AURELIUS",
                      "added":  "2026-09-05T21:18:46",
-                     "started":  null,
+                     "started":  "2026-09-06T03:28:58",
                      "finished":  null,
                      "output":  null
                  }

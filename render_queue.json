@@ -1,6 +1,6 @@
 {
     "version":  1,
-    "next_id":  20,
+    "next_id":  21,
     "jobs":  [
                  {
                      "id":  1,
@@ -229,6 +229,31 @@
                      "added_by":  "chat: hairy brain",
                      "added_on":  "AURELIUS",
                      "added":  "2026-09-05T21:18:36",
+                     "started":  null,
+                     "finished":  null,
+                     "output":  null
+                 },
+                 {
+                     "id":  20,
+                     "project":  "brain",
+                     "name":  "hairy_brain_360_monstersinc",
+                     "script":  "D:\\Meshes\\hairy_brain_360.py",
+                     "args":  [
+                                  "frames=360",
+                                  "palette=amy",
+                                  "gold=1.0,0.82,0.18",
+                                  "length=0.02",
+                                  "lightfollow=1",
+                                  "camh=50",
+                                  "camdist=1.4",
+                                  "out=D:\\Meshes\\renders\\hairy_brain_360_monstersinc.mp4"
+                              ],
+                     "expect_minutes":  100,
+                     "status":  "queued",
+                     "note":  "Pink/purple/blue/gold fur, 2 mm, lights parented to the camera rig so they travel with it. Beats 1/120/240 checked as stills 5 Sept. ~11 s/frame.",
+                     "added_by":  "chat: hairy brain",
+                     "added_on":  "AURELIUS",
+                     "added":  "2026-09-05T21:18:46",
                      "started":  null,
                      "finished":  null,
                      "output":  null

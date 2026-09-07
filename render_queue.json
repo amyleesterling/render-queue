@@ -232,31 +232,6 @@
                      "started":  "2026-09-06T02:00:06",
                      "finished":  "2026-09-06T03:28:21",
                      "output":  "D:\\Meshes\\renders\\hairy_brain_360_golddots.mp4"
-                 },
-                 {
-                     "id":  20,
-                     "project":  "brain",
-                     "name":  "hairy_brain_360_monstersinc",
-                     "script":  "D:\\Meshes\\hairy_brain_360.py",
-                     "args":  [
-                                  "frames=360",
-                                  "palette=amy",
-                                  "gold=1.0,0.82,0.18",
-                                  "length=0.02",
-                                  "lightfollow=1",
-                                  "camh=50",
-                                  "camdist=1.4",
-                                  "out=D:\\Meshes\\renders\\hairy_brain_360_monstersinc.mp4"
-                              ],
-                     "expect_minutes":  100,
-                     "status":  "running",
-                     "note":  "Pink/purple/blue/gold fur, 2 mm, lights parented to the camera rig so they travel with it. Beats 1/120/240 checked as stills 5 Sept. ~11 s/frame.",
-                     "added_by":  "chat: hairy brain",
-                     "added_on":  "AURELIUS",
-                     "added":  "2026-09-05T21:18:46",
-                     "started":  "2026-09-06T03:28:58",
-                     "finished":  null,
-                     "output":  null
                  }
              ]
 }

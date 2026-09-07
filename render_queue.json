@@ -1,6 +1,6 @@
 {
     "version":  1,
-    "next_id":  24,
+    "next_id":  25,
     "jobs":  [
                  {
                      "id":  1,
@@ -276,6 +276,33 @@
                      "added_by":  "claude desktop, perch plant wall session 6 Sep",
                      "added_on":  "AURELIUS",
                      "added":  "2026-09-06T20:36:38",
+                     "started":  null,
+                     "finished":  null,
+                     "output":  null
+                 },
+                 {
+                     "id":  24,
+                     "project":  "brain",
+                     "name":  "hairy_brain_360_monstersinc_v2",
+                     "script":  "D:\\Meshes\\hairy_brain_360.py",
+                     "args":  [
+                                  "frames=360",
+                                  "palette=monsters",
+                                  "gold=1.0,0.95,0.32",
+                                  "peaklo=0.91",
+                                  "peakhi=0.98",
+                                  "length=0.02",
+                                  "lightfollow=1",
+                                  "camh=50",
+                                  "camdist=1.4",
+                                  "out=D:\\Meshes\\renders\\hairy_brain_360_monstersinc_v2.mp4"
+                              ],
+                     "expect_minutes":  100,
+                     "status":  "queued",
+                     "note":  "Monsters Inc v2: bright blue body, purple folds, sunny yellow on gyral crests (Amy: mostly BRIGHT blue, purple, yellow). Beats 1/120/240 checked 6 Sept. Lights ride with camera.",
+                     "added_by":  "chat: hairy brain",
+                     "added_on":  "AURELIUS",
+                     "added":  "2026-09-06T22:06:35",
                      "started":  null,
                      "finished":  null,
                      "output":  null

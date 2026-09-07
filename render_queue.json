@@ -1,6 +1,6 @@
 {
     "version":  1,
-    "next_id":  21,
+    "next_id":  22,
     "jobs":  [
                  {
                      "id":  1,
@@ -232,6 +232,31 @@
                      "started":  "2026-09-06T02:00:06",
                      "finished":  "2026-09-06T03:28:21",
                      "output":  "D:\\Meshes\\renders\\hairy_brain_360_golddots.mp4"
+                 },
+                 {
+                     "id":  21,
+                     "project":  "brain",
+                     "name":  "hairy_brain_360_monstersinc",
+                     "script":  "D:\\Meshes\\hairy_brain_360.py",
+                     "args":  [
+                                  "frames=360",
+                                  "palette=amy",
+                                  "gold=1.0,0.82,0.18",
+                                  "length=0.02",
+                                  "lightfollow=1",
+                                  "camh=50",
+                                  "camdist=1.4",
+                                  "out=D:\\Meshes\\renders\\hairy_brain_360_monstersinc.mp4"
+                              ],
+                     "expect_minutes":  60,
+                     "status":  "queued",
+                     "note":  "RESUME of job 20: machine rebooted 03:58 on 6 Sept at frame 153/360. PNG sequence picks up where it stopped. Pink/purple/blue/gold fur, lights ride with camera. Beats checked 5 Sept.",
+                     "added_by":  "chat: hairy brain",
+                     "added_on":  "AURELIUS",
+                     "added":  "2026-09-06T20:28:27",
+                     "started":  null,
+                     "finished":  null,
+                     "output":  null
                  }
              ]
 }

@@ -249,12 +249,12 @@
                                   "out=D:\\Meshes\\renders\\hairy_brain_360_golddots.mp4"
                               ],
                      "expect_minutes":  100,
-                     "status":  "queued",
+                     "status":  "running",
                      "note":  "v2 of job 19: area lights were reflecting in the glossy floor as a pale rectangle behind the brain for part of the turn. Lights now hidden from glossy rays; beats 120 and 200 checked clean 6 Sept. Existing frames moved aside by the queue.",
                      "added_by":  "chat: hairy brain",
                      "added_on":  "AURELIUS",
                      "added":  "2026-09-06T20:30:27",
-                     "started":  null,
+                     "started":  "2026-09-07T03:00:04",
                      "finished":  null,
                      "output":  null
                  },

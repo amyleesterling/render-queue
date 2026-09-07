@@ -271,12 +271,12 @@
                                   "192"
                               ],
                      "expect_minutes":  20,
-                     "status":  "queued",
+                     "status":  "running",
                      "note":  "6 plant combinations as portrait stills 1400x1750. Geometry checked by loading each GLB in tools/viewer.html and screenshotting: plants read as phalaenopsis, 2-shelf and 3-shelf both correct. Camera and lights verified analytically with --check (no GPU): all 6 in_frame=True, fill 88-90 pct, margins \u003e5 pct every side, 5-6 lights at 824-846W plus world. NOT yet seen as a rendered still because job 20 had the GPU.",
                      "added_by":  "claude desktop, perch plant wall session 6 Sep",
                      "added_on":  "AURELIUS",
                      "added":  "2026-09-06T20:36:38",
-                     "started":  null,
+                     "started":  "2026-09-07T03:01:32",
                      "finished":  null,
                      "output":  null
                  },

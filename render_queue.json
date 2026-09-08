@@ -1,6 +1,6 @@
 {
     "version":  1,
-    "next_id":  26,
+    "next_id":  27,
     "jobs":  [
                  {
                      "id":  1,
@@ -306,6 +306,31 @@
                      "started":  "2026-09-07T03:02:29",
                      "finished":  "2026-09-07T04:18:35",
                      "output":  "D:\\Meshes\\renders\\hairy_brain_360_rainbow.mp4"
+                 },
+                 {
+                     "id":  26,
+                     "project":  "brain",
+                     "name":  "hairy_brain_360_golddots_v3",
+                     "script":  "D:\\Meshes\\hairy_brain_360.py",
+                     "args":  [
+                                  "frames=360",
+                                  "style=holo_dots",
+                                  "holocol=gold",
+                                  "strands=2000000",
+                                  "dotglow=1.8",
+                                  "camh=50",
+                                  "camdist=1.4",
+                                  "out=D:\\Meshes\\renders\\hairy_brain_360_golddots.mp4"
+                              ],
+                     "expect_minutes":  100,
+                     "status":  "queued",
+                     "note":  "v3. v2 finished in 42 s because the queue moves the mp4 aside but not the _frames folder, so the script resumed 360 stale frames with the floor reflection. Old frames renamed *_v1_reflection. Lights hidden from glossy; beats 120/200 checked clean 6 Sept.",
+                     "added_by":  "chat: hairy brain",
+                     "added_on":  "AURELIUS",
+                     "added":  "2026-09-08T14:13:46",
+                     "started":  null,
+                     "finished":  null,
+                     "output":  null
                  }
              ]
 }

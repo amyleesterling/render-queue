@@ -323,12 +323,12 @@
                                   "out=D:\\Meshes\\renders\\hairy_brain_360_golddots.mp4"
                               ],
                      "expect_minutes":  100,
-                     "status":  "queued",
+                     "status":  "running",
                      "note":  "v3. v2 finished in 42 s because the queue moves the mp4 aside but not the _frames folder, so the script resumed 360 stale frames with the floor reflection. Old frames renamed *_v1_reflection. Lights hidden from glossy; beats 120/200 checked clean 6 Sept.",
                      "added_by":  "chat: hairy brain",
                      "added_on":  "AURELIUS",
                      "added":  "2026-09-08T14:13:46",
-                     "started":  null,
+                     "started":  "2026-09-09T12:15:05",
                      "finished":  null,
                      "output":  null
                  }

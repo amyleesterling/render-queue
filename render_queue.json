@@ -364,12 +364,12 @@
                                   "out=D:\\Meshes\\renders\\retina_sac_mosaic_48.mp4"
                               ],
                      "expect_minutes":  75,
-                     "status":  "queued",
+                     "status":  "running",
                      "note":  "The starburst mosaic again, now 48 cells not 24. Same script and same move as the 31 July film that is live on the page, so the shot is proven; only the cell count changed, because selection moved off the stale has_mesh column onto meshes_clean. New out= name on purpose: it must not touch the live 24 cell render or its _frames folder.",
                      "added_by":  "chat: retina audit",
                      "added_on":  "AURELIUS",
                      "added":  "2026-10-07T20:16:16",
-                     "started":  null,
+                     "started":  "2026-10-08T01:42:46",
                      "finished":  null,
                      "output":  null
                  }

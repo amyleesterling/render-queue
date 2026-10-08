@@ -13,7 +13,7 @@ fixes both.
 
 > **If you built an animation, add it to the queue and stop. Do not render it.**
 
-Rendering is the queue's job, at 02:00, when nobody is competing for the GPU.
+Rendering is the queue's job, at 01:00, when nobody is competing for the GPU.
 
 ---
 
@@ -62,6 +62,18 @@ picture should look like. So:
    object or collection count in the log before believing a fast render.
 3. Put the beat check in the `-Note`, so the next person knows it was done.
 
+## Words go on in post
+
+Render the picture with no text in it. Captions, titles, counters, legends,
+watermarks, whole frame fades and end cards are a separate overlay on a
+transparent background, driven by the same timeline and one captions file.
+ffmpeg puts the two together afterwards, so changing a word never re-renders
+the plate.
+
+Do the beat check on the composite, not on the plate alone. The full rule and a
+reference implementation are in
+[RENDERING.md, section 9](https://github.com/amyleesterling/render/blob/main/RENDERING.md#9-words-in-post-then-encode).
+
 ## Where renders end up
 
 | project | production | site repo | live |
@@ -76,7 +88,7 @@ of `queue.ps1` and a row here.
 
 ## The nightly task
 
-`MeshesRenderQueue`, daily at 02:00, ten hour limit, starts late if the machine
+`MeshesRenderQueue`, daily at 01:00, ten hour limit, starts late if the machine
 was asleep. Retime it with:
 
 ```powershell

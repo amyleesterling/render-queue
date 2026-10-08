@@ -1,6 +1,6 @@
 {
     "version":  1,
-    "next_id":  27,
+    "next_id":  28,
     "jobs":  [
                  {
                      "id":  1,
@@ -329,6 +329,27 @@
                      "added_on":  "AURELIUS",
                      "added":  "2026-09-08T14:13:46",
                      "started":  "2026-09-09T12:15:05",
+                     "finished":  null,
+                     "output":  null
+                 },
+                 {
+                     "id":  27,
+                     "project":  "retina",
+                     "name":  "strat_364_stills",
+                     "script":  "D:\\Meshes\\retina_strat_anim.py",
+                     "args":  [
+                                  "mode=strat",
+                                  "frames=240",
+                                  "stills=1,120,210",
+                                  "out=D:\\Meshes\\renders\\retina_strat364.mp4"
+                              ],
+                     "expect_minutes":  45,
+                     "status":  "queued",
+                     "note":  "STILLS ONLY, three beats, to check a film that has never been rendered. mode=strat was stuck at 202 cells because it read the stale has_mesh column; it now selects on meshes_clean and gets all 364. Beat 1 = face on, 120 = mid turn, 210 = edge on after the push. Full film only after these are looked at.",
+                     "added_by":  "chat: retina audit",
+                     "added_on":  "AURELIUS",
+                     "added":  "2026-10-07T20:16:01",
+                     "started":  null,
                      "finished":  null,
                      "output":  null
                  }

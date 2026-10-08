@@ -344,12 +344,12 @@
                                   "out=D:\\Meshes\\renders\\retina_strat364.mp4"
                               ],
                      "expect_minutes":  45,
-                     "status":  "queued",
+                     "status":  "running",
                      "note":  "STILLS ONLY, three beats, to check a film that has never been rendered. mode=strat was stuck at 202 cells because it read the stale has_mesh column; it now selects on meshes_clean and gets all 364. Beat 1 = face on, 120 = mid turn, 210 = edge on after the push. Full film only after these are looked at.",
                      "added_by":  "chat: retina audit",
                      "added_on":  "AURELIUS",
                      "added":  "2026-10-07T20:16:01",
-                     "started":  null,
+                     "started":  "2026-10-08T01:00:04",
                      "finished":  null,
                      "output":  null
                  },
